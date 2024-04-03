@@ -18,16 +18,519 @@ li{
 	list-style: none;
 }
 
+header{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.item{
+    margin: 0 25px;
+}
+div{
+    margin-bottom:20px;
+    padding:10px;
+}
+tfoot{
+	border: 1px solid #0000;
+}
+	
+.icon{
+    flex-basis: 25%;  
+    margin-left: 22px;
+}
+
+.menu{
+    text-align: center;
+    display: flex;
+    flex-basis: 50%;
+}
+.menu > li{
+    padding:10px;
+    text-decoration: none;
+
+}
+li a{
+    color:#858088;
+}
+.menu>li:hover{
+ color:#fd6e4f;
+ border-bottom: solid ;
+ 
+}
+.menu a:hover{
+    color:#fd6e4f;
+}
+
 a{
     text-decoration: none;
     color:black;
 
-} 
+}
+.other{
+    margin-left: 60px;
+	margin-top: 20px;
+}
+.other a{
+    padding:5px;
+    margin:5px;
+}
+.other input{
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    background-color: whitesmoke;
+    color: gray;
+}
+.banner{
+    width: 100%;
+    height: 440px;
+    background-image: url(images/trangchu/Montana-Poets-Laureate_homepage-hero.jpg);
+    justify-content: space-around;
+    align-self: center;
+    
+}
+.banner p{
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    
+}
+.button{
+    text-align: center;
+	margin-top: 10px;
+}
+#btt{
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color:black;
+    color:white;
 
+}
+#btt:hover{
+    color:black;
+    background-color: white;
+}   
+
+.sum{
+    padding-bottom: 30px;
+    margin: 0 20%;
+}
 h1{
     font-size: 30px;
     text-shadow: 2px;
     color:grey;
     text-align: center;
 
+}
+h2{
+    font-size: 23px;
+    text-align: center;
+
+}
+ 
+.product{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-item{
+    text-align: center;
+}
+.product-item img{
+    max-width: 100%;
+    padding-bottom: 20px;
+    margin: 0px 0px 10px;
+}
+.product-info{
+    text-align: center;
+    margin:0;
+    padding:0;
+}
+.product-info p{
+    size:15px;
+    font-weight: 300;
+
+}
+.adding-cart{
+        margin:0;
+        padding:0;
+        text-align: center;
+        display:block;
+        padding:15px 0;
+        background-color: orangered;
+        visibility: hidden;
+}
+.product-item:hover{
+    .adding-cart{
+        visibility: visible;
+    }
+.product-info{
+        visibility:hidden ;
+    }
+}
+
+.mota{
+    display:flex;
+    flex:auto;
+}
+
+#footer{
+    width: 100%;
+    height: 322px;
+    background-color: black;
+    margin-top: 150px;
+    padding: 0 63px;
+    padding-left: 57px;
+    justify-content: space-around;
+    color:white;
+}
+.top {
+    height: 75px;
+    width: 75px;
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    text-align: center;
+}
+.icon-bag{
+    height: 75px;
+    width: 75px;
+    padding: 10px;
+    position: fixed;
+    bottom: 75px;
+    right: 10px;
+    text-align: center;
+
+}
+.icon{
+    text-align: center;
+}
+.qmenu{
+    display:flex;
+    justify-content:space-around;
+
+
+}
+.position{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 900px;
+    margin: 50px auto;
+}
+.list{
+    display:grid;
+	grid-template-columns: 300px 300px 300px 300px;
+    align-content: center;
+    justify-content: center;
+    column-gap: 8px;
+}
+.listPage{
+    text-align: center;
+    padding: 3px;
+}
+.listPage li{
+	background-color: #0000;
+	border: 1px solid #fd6e4f;
+    padding:20px;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+}
+img:hover{
+	border: 1px solid #0000;
+}
+
+#active{
+	background-color: #fd6e4f;
+}
+
+#active2{
+	color: #fd6e4f;
+}
+
+#sumcost{
+ font-weight: 700;
+}
+#cost{
+ font-weight: 700;
+}
+li > img:hover{
+	border: 1px solid #0000;
+}
+
+button{
+  border: 1px solid #dbd7d9;
+  justify-content: center;
+  box-shadow: 0px 0px 1px 0px #00000066, 0px 0px 1px 0px #0000004d;
+  border-radius: 1px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 5px 55px;
+  
+}
+
+button:hover{
+  background-color: #ff6900;
+  border: 1px solid #ff6900;
+}
+
+.title{
+  background-color: #ffff;
+  border: 1px solid #ffff;
+  box-shadow: 0px 0px 1px 0px #00000000, 0px 0px 1px 0px #00000000;
+  line-height: 20px;
+}
+
+div.product-item input{
+	width:40px;
+	
+}
+
+/*Phuc - DK,DN*/ 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+.content{
+   padding: 50px 60px; 
+   border: 3px solid grey;
+   background-color: #fff;
+   border-radius: 10px;
+   width: 60%;
+} 
+.content h1{
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+    color: grey;
+}
+.input-hoten,.input-email,.input-matkhau,.input-xnmk,.input-SDT,.input-topic{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;  
+    border: 1px solid whitesmoke; 
+    background-color: whitesmoke;
+}
+ .box-submit{
+    margin: 25px;
+    text-align: center;
+} 
+
+.box-submit span{
+    margin: 30px  20px;
+}
+.box-UD{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+#DK{
+    color: #00BFFF;
+}
+#DK:hover{
+    border-bottom: 3px solid orangered;
+}
+.box-UD i,img{
+    margin: 0px 20px;
+}
+.fb{
+    color: blue;
+}
+.ap{
+    color: green;
+} 
+.sign-or{
+    text-align: center;
+    margin: 40px auto;
+    font-size: 20px;
+    position: relative;
+}
+.sign-or:after{
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute; 
+    background-color: grey;
+    top: 50%;
+    left: 0px;
+}
+.sign-or span{
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    color: grey;
+}
+.content p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+.box-noidung{
+    width: 100%;
+    background-color: whitesmoke;
+}
+.box-submit input{
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+    margin: 0px 10px ;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #00BFFF; 
+ 
+}
+.box-submit a{
+    text-decoration: none;
+    border-radius: 10px;
+    border: 2px solid whitesmoke;
+    padding: 12px;
+    font-size: 15px;
+    background-color: #7FFF00;
+}
+#book-title{
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+}
+/*Phuc -LH*/
+.box-content p{
+    text-align: center;
+    margin: 30px 0px;
+}
+.box-chinh{
+    width: 45%;
+    margin: 70px 400px;
+}
+.input-name,.input-Email,.input-sdt,.input-Topic, .box-ND{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;  
+    border: 1px solid whitesmoke; 
+    background-color: whitesmoke;
+}
+  
+.box-LH input{
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #00BFFF; 
+}
+#map{
+	margin-left: 150px;
+}
+/*dap ung*/
+@media only screen and (max-width: 600px) {  
+	
+	.box-container{
+		
+		max-width: auto;
+		display: grid;
+	}
+	.qmenu{
+		display:block;
+}
+    .list{
+        display:block;
+    }
+    .header{
+        margin-bottom: 15px;
+    }
+    .product{
+        display:block;
+    } 
+    #footer{
+    display: none;    
+	}
+    .mota{
+        display: grid;
+    }
+    .other{
+        display: none;
+    }
+    .line{
+        display: block;
+        width: 30px;
+        height: 3px ;
+        margin: 6px 0;
+        background-color: white;
+        padding:0;  
+        transition: 3s;
+    }
+
+    .hamburger{
+        cursor: pointer;
+        background-color: black;
+        align-items: center;
+    }
+    .dropdown{
+        position: relative;
+        display: inline-block;
+    }
+    .menu{
+        display: none;
+        border: #858088;
+        background-color: black;
+        position:absolute;
+        height: 450;
+        width: 100; 
+        top:80px;
+        right:10px;
+        text-align: center;
+        justify-content: center;
+    }
+    .menu a{
+        color:white;
+        
+    }
+    .menu .item{
+        display: block;
+    }
+    .dropdown:hover .menu{
+        display: block;}
+	.container{
+		width: auto;
+	}
+	.box-submit a{
+		display: block;
+	}
+}
+
+/*Phong Vũ*/
+.elementor-section {
+    background-color: black;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.ul{
+	align:"justify";
+}
+
+div.box-row > h2{
+           margin: 20px 0px; /* Khoảng cách dưới của thẻ h2 là 1 dòng */
+}
+
+div.box-row > ul{
+           margin: 10px 0px;
+		   text-align: justify;
+}
+div.box-row > p{
+		   text-align: justify;
 }
