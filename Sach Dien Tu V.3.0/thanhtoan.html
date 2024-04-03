@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="vi-vn">
+  <head>
+        <meta charset="UTF-8">
+        <title>Giỏ Hàng</title>
+        <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		
+		<script type="text/javascript" src="script.js"></script>
+		<script>window.onload = function(){ hienthi_sp(); };</script>
+		<link rel ="icon" href="images/trangchu/open-notebook-or-book-studing-concept-book-icon-red-free-vector.jpg">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script>
+    const host = "https://provinces.open-api.vn/api/";
+var callAPI = (api) => {
+    return axios.get(api)
+        .then((response) => {
+            renderData(response.data, "city");
+        });
+}
+callAPI('https://provinces.open-api.vn/api/?depth=1');
+var callApiDistrict = (api) => {
+    return axios.get(api)
+        .then((response) => {
+            renderData(response.data.districts, "district");
+        });
+}
+var callApiWard = (api) => {
+    return axios.get(api)
+        .then((response) => {
+            renderData(response.data.wards, "ward");
+        });
+}
+
+var renderData = (array, select) => {
+    let row = ' <option disable value="">Chọn</option>';
+    array.forEach(element => {
+        row += `<option data-id="${element.code}" value="${element.name}">${element.name}</option>`
+    });
+    document.querySelector("#" + select).innerHTML = row
+}
+
+$("#city").change(() => {
+    callApiDistrict(host + "p/" + $("#city").find(':selected').data('id') + "?depth=2");
+    printResult();
+});
+$("#district").change(() => {
+    callApiWard(host + "d/" + $("#district").find(':selected').data('id') + "?depth=2");
+    printResult();
+});
+$("#ward").change(() => {
+    printResult();
+})
+
+var printResult = () => {
+    if ($("#district").find(':selected').data('id') != "" && $("#city").find(':selected').data('id') != "" &&
+        $("#ward").find(':selected').data('id') != "") {
+        let result = $("#city option:selected").text() +
+            " | " + $("#district option:selected").text() + " | " +
+            $("#ward option:selected").text();
+        $("#result").text(result)
+    }
+
+}
+	</script>
+	</head>
+  <body>
+    <header>
+			<div class="icon" >
+				<a href="trangchu.html"><IMG  src="images/trangchu/OIP (2).jpg" width="150px" ></a>
+			</div>
+      <div class="dropdown">
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class ="menu">
+            <li class = "item"><a href ="trangchu.html">Trang chủ</a></li>
+            <li class ="item"> <a href ="sanpham1.html" >Sản Phẩm</a></li>
+            <li class ="item"><a href ="gioithieu.html" >Giới thiệu</a></li>
+             <li class ="item"><a href ="LienHe.html" > Liên hệ</a></li>
+        </div>
+    </div>
+			<div class ="other">
+			<form class="search-box" method="GET" id="search-form" action="timkiem.html" onsubmit="return mySearch(event);">
+            <input type="search" name="search" id="search" placeholder="Nhập nội dung cần tìm">
+            <a class="fa fa-search" ></a>
+            <a class ="fa fa-user" href="DangNhap.html"></a>
+            <a onclick="window.location.href='giohang.html'" class="fa fa-shopping-bag"></a>
+			</form>
+        </div>
+	</header>
+    <main>
+	
+      <h1>Thông Tin Thanh Toán</h1> </br>
+	  <div>
+		<h3>ĐỊA CHỈ GIAO HÀNG</h3> <hr>
+		<table id="dong">
+			<tr>
+				<td><lable for="mail"><b>Họ và tên người nhận</b></lable></td>
+				<td><input name="txtname" id="name" name="name" maxlength="" placeholder="Vui lòng nhập họ và tên" size="40"></td>
+			</tr>
+			<tr>
+				<td><b>Email</b></td>
+				<td><input type="txtmail" name="mail" value="" maxlength="" placeholder="Vui lòng nhập Email" size="40"></th>
+			</tr>
+			<tr>
+				<td><b>Số điện thoại</b></td>
+				<td><input type="txtphone" name="phone" value="" maxlength="" placeholder="Vui lòng nhập số điện thoại" size="40"></td>
+			</tr>
+			<tr>
+					<td><b>Chọn tỉnh thành</b></td>
+					<td>
+						<select id="city">
+						<option value="" selected>Chọn tỉnh thành</option>           
+						</select>
+					</td>		  
+			</tr>
+			<tr>
+				<td><b>Chọn quận huyện</b></td>
+				<td>
+					<select id="district">
+					<option value="" selected>Chọn quận huyện</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><b>Chọn xã phường</b></td>
+				<td>
+					<select id="ward">
+					<option value="" selected>Chọn phường xã</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><b>Địa chỉ nhận hàng</b></td>
+				<td><input type="txtaddr" name="addr" value="" maxlength="" placeholder="Vui lòng nhập địa chỉ ở 4 cấp" size="40"></td>
+			</tr>
+			<h2 id="result"></h2>
+			
+			
+		</table>
+	  </div>
+	  
+	  <div>
+		<h3>PHƯƠNG THỨC VẬN CHUYỂN</h3> <hr>
+	  </div>
+	  
+	  <div>
+		<h3>PHƯƠNG THƯC THANH TOÁN</h3> <hr>
+	  </div>
+	  
+	  <div>
+		<h3>MÃ KHUYẾN MÃI/MÃ QUÀ TẶNG</h3> <hr>
+	  </div>
+	  
+	  <div>
+		<h3>THÔNG TIN KHÁC</h3> <hr>
+	  </div>
+	  
+		
+
+    </main>
+    <div id="footer">
+      <a href="#top">
+        <img class="top" src="images/trangchu/arrow-144-xxl.png" alt="" srcset="">
+
+    </a>
+	<a href="giohang.html" >
+				<img class="icon-bag" src="images/trangchu/kisspng-shopping-cart-software-computer-icons-mayline-5b3b72a89c95a3.3174593115306226326414.jpg" alt="" srcset="">
+				
+			</a>
+    
+                <div class="icon">
+                    <IMG  src="images/trangchu/logothanhtoan-1-555x67-1.png">
+                    
+                </div>
+                
+                <div class= "qmenu">
+                    <div>
+                        <h3>CHI TIẾT</h3>
+                        <li class = "item"><a href ="trangchu.html">Trang chủ</a></li>
+                        <li class ="item"> <a href ="sanpham1.html" >Thư viện</a></li>
+                        <li class ="item"><a href ="gioithieu.html" >Giới thiệu</a></li>
+                        <li class ="item"><a href ="LienHe.html" > Liên hệ</a></li>
+                    </div>
+                    <div class="media">
+                        <h3>MẠNG XÃ HỘI</h3>
+                        <li class = "item"><a href ="">Facebook</a></li>
+                        <li class = "item"><a href ="">Instagram</a></li>
+                        <li class = "item"><a href ="">Youtube</a></li>
+                    </div>
+                    <div>
+                        <h3>CONTACT US</h3>
+                        <form>
+                            <input placeholder="Địa chỉ Email" type="text">
+                            <button> Gửi</button>
+                        </form>
+                    </div>
+				</div>
+				<div class="qmenu">
+						<p><i class="fa fa-location-dot"></i> Khu II Trường Đại Học Cần Thơ,Đường 3/2, Phường Xuân Khánh, Quận Ninh Kiều , TP.Cần Thơ</p>
+						<p><i class="fa fa-phone"></i> 0335458889</p>
+						<p><i class="fa-solid fa-envelope"></i> novel@novel.com</p>
+				</div>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Liên Hệ</title>
+		<link rel ="icon" href="images/trangchu/open-notebook-or-book-studing-concept-book-icon-red-free-vector.jpg">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+	integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="script.js"  type="text/javascript"></script>
+    </head>
+    <body>
+        <header>
+            <div class="icon" >
+                <a href="trangchu.html"><IMG  src="images/trangchu/OIP (2).jpg" width="150px" ></a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class ="menu">
+                    <li class = "item"><a href ="trangchu.html">Trang chủ</a></li>
+                    <li class ="item"> <a href ="sanpham1.html" >Sản Phẩm</a></li>
+                    <li class ="item"><a href ="gioithieu.html" >Giới thiệu</a></li>
+                     <li class ="item"><a id="active2" href ="LienHe.html" > Liên hệ</a></li>
+                </div>
+            </div>
+            <div class ="other">
+			<form class="search-box" method="GET" id="search-form" action="timkiem.html" onsubmit="return mySearch(event);">
+            <input type="search" name="search" id="search" placeholder="Nhập nội dung cần tìm">
+            <a class="fa fa-search" ></a>
+            <a class ="fa fa-user" href="DangNhap.html"></a>
+            <a onclick="window.location.href='giohang.html'" class="fa fa-shopping-bag"></a>
+			</form>
+        </div>
+        </header>
+        <main>
+        <div class="box-container">
+            <div class="box-content">
+                <h1>Liên Hệ</h1>
+                <p><i class="fa fa-location-dot"></i> Khu II Trường Đại Học Cần Thơ,Đường 3/2, Phường Xuân Khánh, Quận Ninh Kiều , TP.Cần Thơ</p>
+                <p><i class="fa fa-phone"></i> 0335458889</p>
+                <p><i class="fa-solid fa-envelope"></i> novel@novel.com</p>
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8415184420396!2d105.7680403748461!3d10.029933690077012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0895a51d60719%3A0x9d76b0035f6d53d0!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBD4bqnbiBUaMah!5e0!3m2!1svi!2s!4v1700722843786!5m2!1svi!2s" width=80% height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+                <form action="" method="post" enctype="multipart/form-data" onsubmit=" return FormLH(this);" name="box_Form">
+                   <div class="box-chinh">
+                    <label for="HoTen">Họ Tên * </label>
+                    <input  type="text" name="name" class="input-name"
+                        placeholder="Họ và Tên: " required>
+                  
+                    <label for="Email">Email * </label>
+                    <input  type="text" name="email" class="input-Email"
+                        placeholder="Email: " required>
+
+                     <label for="SĐT">Số Điện Thoại * </label>
+                    <input  type="text" name="SĐT" class="input-sdt"
+                        placeholder="Số Điện Thoại: " required> 
+
+                    <label for="ChuDe">Chủ Đề * </label>
+                    <input type="text" name="topic" class="input-Topic"
+                        placeholder="Chủ Đề: " required>
+
+                    <span>Nội Dung *</span>
+                    <textarea class="box-ND" id="details" rows="7" cols="50" type="text" name="message" placeholder="Nội dung cần liên hệ" required></textarea>
+               
+                    <div class="box-LH">
+                    <input type="submit" value="Gửi">
+                    </div>
+                 </div>    
+                </form>
+            </div>
+        </div>
+        </main>
+        <div id="footer">
+            <a href="#top">
+                <img class="top" src="images/trangchu/arrow-144-xxl.png" alt="" srcset="">
+
+            </a>
+            <a href="giohang.html" >
+                <img class="icon-bag" src="images/trangchu/kisspng-shopping-cart-software-computer-icons-mayline-5b3b72a89c95a3.3174593115306226326414.jpg" alt="" srcset="">
+                
+            </a>
+            <div class="icon">
+                <IMG  src="images/trangchu/logothanhtoan-1-555x67-1.png">   
+            </div>
+            <div class="qmenu">
+                <div>
+                        <h3>CHI TIẾT</h3>
+                        <li class = "item"><a href ="trangchu.html">Trang chủ</a></li>
+                        <li class ="item"> <a href ="sanpham1.html" >Sản Phẩm</a></li>
+                        <li class ="item"><a href ="gioithieu.html" >Giới thiệu</a></li>
+                        <li class ="item"><a href ="LienHe.html" > Liên hệ</a></li>
+                    </div>
+                <DIV class="media">
+                    <h3>MẠNG XÃ HỘI</h3>
+                    <li class = "item"><a href ="">Facebook</a></li>
+                    <li class = "item"><a href ="">Instagram</a></li>
+                    <li class = "item"><a href ="">Youtube</a></li>
+                </DIV>
+                <div>
+                    <h3>CONTACT US</h3>
+                    <form>
+                        <input placeholder="Địa chỉ Email" type="text">
+                        <button>Gửi</button>
+                    </form>
+                </div>
+            </div>
+			<div class="qmenu">
+						<p><i class="fa fa-location-dot"></i> Khu II Trường Đại Học Cần Thơ,Đường 3/2, Phường Xuân Khánh, Quận Ninh Kiều , TP.Cần Thơ</p>
+						<p><i class="fa fa-phone"></i> 0335458889</p>
+						<p><i class="fa-solid fa-envelope"></i> novel@novel.com</p>
+				</div>
+				</div>
+    </body>
+</html>

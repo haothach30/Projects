@@ -1,0 +1,33 @@
+*{ 
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.line{
+    display: none;
+}
+main {
+  display: grid;
+  grid-area: main-cell;
+  border-radius: 5px;
+  padding: 0px 5px;
+}
+
+li{
+	list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+
+} 
+
+h1{
+    font-size: 30px;
+    text-shadow: 2px;
+    color:grey;
+    text-align: center;
+
+}

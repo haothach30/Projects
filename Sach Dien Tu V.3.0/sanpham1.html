@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sản Phẩm</title>
+        <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		
+		<script type="text/javascript" src="script.js"></script>
+		<link rel ="icon" href="images/trangchu/open-notebook-or-book-studing-concept-book-icon-red-free-vector.jpg">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header>
+			<div class="icon" >
+				<a href="trangchu.html"><IMG  src="images/trangchu/OIP (2).jpg" width="150px" ></a>
+			</div>
+			<div class="dropdown">
+				<div class="hamburger">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+				<div class ="menu">
+					<li class = "item"><a  href ="trangchu.html">Trang chủ</a></li>
+					<li class ="item"> <a id="active2" href ="sanpham1.html" >Sản Phẩm</a></li>
+					<li class ="item"><a href ="gioithieu.html" >Giới thiệu</a></li>
+					 <li class ="item"><a href ="LienHe.html" > Liên hệ</a></li>
+				</div>
+			</div>
+			<div class ="other">
+				<form class="search-box" method="GET" id="search-form" action="timkiem.html" onsubmit="return mySearch(event);">
+				<input type="search" name="search" id="search" placeholder="Nhập nội dung cần tìm">
+				<a class="fa fa-search" ></a>
+				<a class ="fa fa-user" href="DangNhap.html"></a>
+				<a onclick="window.location.href='giohang.html'" class="fa fa-shopping-bag"></a>
+				</form>
+			</div>
+		</header>
+		
+        <main>
+            <article>
+			<div>
+				<h1>Danh sách sản phẩm</h1>
+			</div>
+				<div class="">
+					<div class="list">
+		  
+						<li>
+							<div class="product-item">
+								<img src="./images/sanpham/sp1.jpg">
+								<p id="book-title">Clock Word</p>
+								<p id="cost">Giá: 75.000đ</p>
+									<p>Số lượng: <input id="sp001" type="number" value="" size = "3"> </p></br>
+									<p><button onclick="themsp('sp001')">Thêm vào giỏ hàng</button></p>
+							</div>
+						</li>
+						
+						<li>
+							<div class="product-item">
+								<img src="./images/sanpham/sp2.jpg">
+								<p id="book-title">Trà Hoa Nữ</p>
+								<p id="cost">Giá: 80.000đ</p>
+									<p>Số lượng: <input id="sp002" type="number" value="" size="3"> </p>	</br>
+									<p><button onclick="themsp('sp002')">Thêm vào giỏ hàng</button></p>
+							</div>
+						</li>
+						
+						<li>
+							<div class="product-item">
+								<img src="./images/sanpham/sp3.jpg">
+								<p id="book-title">Hoàng Tử Bé</p>
+								<p id="cost">Giá: 99.000đ</p>
+									<p>Số lượng: <input id="sp003" type="number" value="" size="3"></p> 	</br>
+									<p><button onclick="themsp('sp003')">Thêm vào giỏ hàng</button></p>
+							</div>
+						</li>
+					  
+					
+						<li>
+							<div class="product-item">
+								<img src="./images/sanpham/sp4.jpg">
+							
+								<p id="book-title">Ác Quỷ Rừng Phế Tích</p>
+								<p id="cost">Giá: 60.000đ</p>
+									<p>Số lượng: <input id="sp004" type="number" value="" size="3"></p> 	</br>
+									<p><button onclick="themsp('sp004')">Thêm vào giỏ hàng</button></p>
+
+							</div>
+						</li>
+						
+						<li>
+							<div class="product-item">
+								<img src="./images/sanpham/sp5.jpg">
+							
+								<p id="book-title">Tiểu thuyết Long Thần Tướng</p>
+								<p id="cost">Giá: 99.000đ</p>
+									<p>Số lượng: <input id="sp005" type="number" value="" size="3"></p> 	</br>
+									<p><button onclick="themsp('sp005')">Thêm vào giỏ hàng</button></p>
+
+							</div>
+						</li>
+						
+						<li>
+							<div class="product-item">
+								<img src="./images/sanpham/sp6.jpg">
+								<p id="book-title">Anne Tóc đỏ dưới Mái nhà Bạch Dương</p>
+								<p id="cost">Giá: 38.000đ</p>
+									<p>Số lượng: <input id="sp006" type="number" value="" size="3"></p> 	</br>
+									<p><button onclick="themsp('sp006')">Thêm vào giỏ hàng</button></p>
+							</div>
+						</li>
+						
+						<li>
+							<div class="product-item">
+								<img src="./images/sanpham/sp17.jpg">
+								<p id="book-title">Địa Ngục Môn</p>
+								<p id="cost">Giá: 55.000đ</p>
+									<p>Số lượng: <input id="sp017" type="number" value="" size="3"></p> 	</br>
+									<p><button onclick="themsp('sp017')">Thêm vào giỏ hàng</button></p>
+							</div>
+						</li>
+						
+						<li>
+							<div class="product-item">
+								<img src="./images/sanpham/sp19.jpg">
+								<p id="book-title">Nhóm Máu O - Tập 2</p>
+								<p id="cost">Giá: 30.000đ</p>
+									<p>Số lượng: <input id="sp019" type="number" value="" size="3"></p> 	</br>
+									<p><button onclick="themsp('sp019')">Thêm vào giỏ hàng</button></p>
+							</div>
+						</li>
+
+					</div>
+			
+				    
+					<ul class="listPage">
+						<a href="sanpham1.html"> <li id ="active">1</li> </a>
+						<a href="sanpham2.html"> <li id ="">2</li> </a>
+						<a href="sanpham3.html"> <li id ="">3</li> </a>
+					</ul>
+			
+	
+				</div>
+			</article>
+        </main>
+        <div id="footer">
+			<a href="#top">
+				<img class="top" src="images/trangchu/arrow-144-xxl.png" alt="" srcset="">
+
+			</a>
+			<a href="giohang.html" >
+				<img class="icon-bag" src="images/trangchu/kisspng-shopping-cart-software-computer-icons-mayline-5b3b72a89c95a3.3174593115306226326414.jpg" alt="" srcset="">
+				
+			</a>
+                <div class="icon">
+                    <IMG  src="images/trangchu/logothanhtoan-1-555x67-1.png">
+                    
+                </div>
+                
+                <div class= "qmenu">
+                    <div>
+                        <h3>CHI TIẾT</h3>
+                        <li class = "item"><a href ="trangchu.html">Trang chủ</a></li>
+                        <li class ="item"> <a href ="sanpham1.html" >Sản phẩm</a></li>
+                        <li class ="item"><a href ="gioithieu.html" >Giới thiệu</a></li>
+                        <li class ="item"><a href ="LienHe.html" > Liên hệ</a></li>
+                    </div>
+                    <div class="media">
+                        <h3>MẠNG XÃ HỘI</h3>
+                        <li class = "item"><a href ="">Facebook</a></li>
+                        <li class = "item"><a href ="">Instagram</a></li>
+                        <li class = "item"><a href ="">Youtube</a></li>
+                    </div>
+                    <div>
+                        <h3>CONTACT US</h3>
+                        <form>
+                            <input placeholder="Địa chỉ Email" type="text">
+                            <button> Gửi</button>
+                        </form>
+                    </div>
+				</div>
+				<div class="qmenu">
+						<p><i class="fa fa-location-dot"></i> Khu II Trường Đại Học Cần Thơ,Đường 3/2, Phường Xuân Khánh, Quận Ninh Kiều , TP.Cần Thơ</p>
+						<p><i class="fa fa-phone"></i> 0335458889</p>
+						<p><i class="fa-solid fa-envelope"></i> novel@novel.com</p>
+				</div>
+				</div>
+    </body>
+</html>
