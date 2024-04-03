@@ -1,0 +1,6 @@
+              Ho Ten   GT Tuoi        DT        DL        DH       DTB
+      Thach Vinh hao  Nam   20  1.000000  2.000000  3.000000  2.000000
+         Kim Ngoc Vi  Nam   19 10.000000  4.000000  6.000000  6.666667
+      Kim Khanh Dang  Nam   19 10.000000  3.000000  8.000000  7.000000
+   huynh thi my hang   nu   19  8.000000  8.000000  9.000000  8.333333
+      Thach Minh Hao  Nam   18 10.000000  9.000000  8.000000  9.000000
